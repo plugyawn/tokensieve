@@ -41,19 +41,31 @@ Oracle labeling is training-only. Inference scores blocks from image/question fe
 
 Color code: red = first K32 cells, orange = additional K128 cells, green = additional K512 cells. Green is late-selected final-grid evidence, not a finer scale.
 
-![selection contact sheet](figures/tokenflow_grid/trace_ladder_contact_sheet.png)
+Budget curve:
 
-![record 000](figures/tokenflow_grid/record_000_trace_ladder.png)
+![budget curve](figures/tokenflow_flat_grid/budget_curve.png)
 
-![record 001](figures/tokenflow_grid/record_001_trace_ladder.png)
+Flat-grid selection overlays, no separate base-evidence panel:
 
-![record 002](figures/tokenflow_grid/record_002_trace_ladder.png)
+![flat-grid selection contact sheet](figures/tokenflow_flat_grid/contact_sheet.png)
 
-![record 003](figures/tokenflow_grid/record_003_trace_ladder.png)
+Per-example flat-grid overlays:
 
-![record 004](figures/tokenflow_grid/record_004_trace_ladder.png)
+![record 000 flat](figures/tokenflow_flat_grid/record_000_selection_overlay.png)
 
-![record 005](figures/tokenflow_grid/record_005_trace_ladder.png)
+![record 001 flat](figures/tokenflow_flat_grid/record_001_selection_overlay.png)
+
+![record 002 flat](figures/tokenflow_flat_grid/record_002_selection_overlay.png)
+
+![record 003 flat](figures/tokenflow_flat_grid/record_003_selection_overlay.png)
+
+![record 004 flat](figures/tokenflow_flat_grid/record_004_selection_overlay.png)
+
+![record 005 flat](figures/tokenflow_flat_grid/record_005_selection_overlay.png)
+
+Semantic/detail ladder, included only to clarify the later dense-semantic sparse-detail ablation:
+
+![semantic/detail selection contact sheet](figures/tokenflow_grid/trace_ladder_contact_sheet.png)
 
 ## Code
 
