@@ -1,6 +1,16 @@
-# 
+<div align = center>
+  <img width="502" height="354" alt="image" src="https://github.com/user-attachments/assets/443b9921-49d7-4e8c-b48c-bbbf10172c90" />
 
-Save some quick LLM prefill time by letting a policy select which tokens are important!
+# tokensieve
+Save some VLM prefill time by letting a policy select which tokens are important!
+
+
+</div>
+
+
+-----
+
+
 I'm told this is close to [QuietPrune: Query-Guided Early Token Pruning for Vision-Language Models](https://openaccess.thecvf.com/content/CVPR2026/papers/Gao_QuietPrune_Query-Guided_Early_Token_Pruning_for_Vision-Language_Models_CVPR_2026_paper.pdf), although I think this is slightly simpler and better(?).
 
 It's built on Bytedance's Tokenflow model, but the idea is to simply train a policy to select tokens such that the marginal CE gain on getting an extra token is maximized.
