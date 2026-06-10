@@ -1,4 +1,9 @@
-# tokenflow
+# 
+
+Save some quick LLM prefill time by letting a policy select which tokens are important!
+I'm told this is close to [QuietPrune: Query-Guided Early Token Pruning for Vision-Language Models], although I think this is slightly simpler and better(?).
+
+It's built on Bytedance's Tokenflow model, but the idea is to simply train a policy to select tokens such that the marginal CE gain on getting an extra token is maximized.
 
 Question-conditioned visual evidence selection on the released TokenFlow VQA grid.
 
