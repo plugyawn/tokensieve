@@ -11,9 +11,11 @@ Save some VLM prefill time by letting a policy select which tokens are important
 -----
 
 
-I'm told this is close to [QuietPrune: Query-Guided Early Token Pruning for Vision-Language Models](https://openaccess.thecvf.com/content/CVPR2026/papers/Gao_QuietPrune_Query-Guided_Early_Token_Pruning_for_Vision-Language_Models_CVPR_2026_paper.pdf), although I think this is slightly simpler and better(?).
+I'm told this is close to [QuietPrune: Query-Guided Early Token Pruning for Vision-Language Models](https://openaccess.thecvf.com/content/CVPR2026/papers/Gao_QuietPrune_Query-Guided_Early_Token_Pruning_for_Vision-Language_Models_CVPR_2026_paper.pdf), although I think this is slightly simpler and better(?). 
 
-It's built on Bytedance's Tokenflow model, but the idea is to simply train a policy to select tokens such that the marginal CE gain on getting an extra token is maximized.
+`tokensieve` is built on Bytedance's Tokenflow model, but the idea is to simply train a policy to select tokens such that the marginal CE gain on getting an extra token is maximized.
+
+Note: the overall idea is to have a version of test-time compute allocation for encoders: next steps are to figure out how the VAR-induced hierarchical structure of the tokens can be used by the policy. Currently, Tokenflow projects tokens to a $27\times 27$ grid, out of which our policy learns to select a subset.
 
 Question-conditioned visual evidence selection on the released TokenFlow VQA grid.
 
