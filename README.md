@@ -15,8 +15,6 @@ I'm told this is close to [QuietPrune: Query-Guided Early Token Pruning for Visi
 
 `tokensieve` is built on Bytedance's Tokenflow model, but the idea is to simply train a policy to select tokens such that the marginal CE gain on getting an extra token is maximized.
 
-Note: the overall idea is to have a version of test-time compute allocation for encoders: next steps are to figure out how the VAR-induced hierarchical structure of the tokens can be used by the policy. Currently, Tokenflow projects tokens to a $27\times 27$ grid, out of which our policy learns to select a subset.
-
 Question-conditioned visual evidence selection on the released TokenFlow VQA grid.
 
 ```text
